@@ -60,7 +60,6 @@ public class SuperFragment extends Fragment implements LoaderManager.LoaderCallb
         dialog.setMessage("Loading Mars Photos...");
 
         binding.lvPhotos.setAdapter(adapter);
-        //click en item para hacer la foto mas grande y visible
         binding.lvPhotos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
@@ -85,12 +84,8 @@ public class SuperFragment extends Fragment implements LoaderManager.LoaderCallb
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //Settings
         if (id == R.id.action_settings) {
             return true;
         }
@@ -141,7 +136,6 @@ public class SuperFragment extends Fragment implements LoaderManager.LoaderCallb
             dialog.dismiss();
         }
 
-        //Async Task
         @Override
         protected Void doInBackground(Void... voids) {
 
@@ -167,7 +161,6 @@ public class SuperFragment extends Fragment implements LoaderManager.LoaderCallb
             return null;
         }
 
-        //Llamada, Filtros de llamada y condiciones
         public ArrayList<Photo> checkFields(String roverCar, Integer sol, String camera, Integer page){
 
             if(((roverCar.equalsIgnoreCase("Curiosity") &&
@@ -186,12 +179,11 @@ public class SuperFragment extends Fragment implements LoaderManager.LoaderCallb
                 Log.d("DEBUG", result != null ? result.toString() : null);
 
                 return result;
-                //DEBUG
-                //return DataAccesObject.getPhotos("curiosity", 1000, "MAST", 1);
+
             }
             else return DataAccesObject.getPhotos("curiosity", 1000, "MAST", 1);
 
-        }//checkFields end
+        }
 
     }
 }

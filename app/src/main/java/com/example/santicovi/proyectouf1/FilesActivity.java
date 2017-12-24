@@ -20,7 +20,7 @@ public class FilesActivity extends AppCompatActivity {
 
     private EditText textBox;
 
-    //lineas d texto a guardar
+
     static final int READ_BLOCK_SIZE = 500;
 
     @Override
@@ -43,17 +43,10 @@ public class FilesActivity extends AppCompatActivity {
             String strFile = file.getAbsolutePath();
             Log.d("DEBOGNOTES", String.valueOf(strFile));
 
-            //File file = getFilesDir();
-            //String strFile = file.toString();
-            //Log.d("DEBOGNOTES", strFile);
-            //OUTput: D/DEBOGNOTES: /data/data/mysupercompany.nasapi/files
-
-            // Escribimos el String en el archivo
             osw.write(str);
             osw.flush();
             osw.close();
 
-            // Mostramos que se ha guardado
             Toast.makeText(getBaseContext(), "Saved", Toast.LENGTH_SHORT).show();
 
             textBox.setText("");
@@ -73,19 +66,14 @@ public class FilesActivity extends AppCompatActivity {
 
             int charRead;
             if((charRead = isr.read(inputBuffer)) > 0){
-                // Convertimos los char a String
+
                 String readString = String.copyValueOf(inputBuffer, 0, charRead);
                 s += readString;
 
-                //inputBuffer = new char[READ_BLOCK_SIZE];
+
             }
-
-            // Establecemos en el EditText el texto que hemos leido
             textBox.setText(s);
-
-            // Mostramos un Toast con el proceso completado
             Toast.makeText(getBaseContext(), "Loaded", Toast.LENGTH_SHORT).show();
-
             isr.close();
         }catch (IOException ex){
             ex.printStackTrace();

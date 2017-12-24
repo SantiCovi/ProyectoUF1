@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_info_rover_oppo"
+    android:layout_width="match_parent"
+    android:background="@drawable/mars"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.santicovi.proyectouf1.InfoRoverOppo"
+    tools:showIn="@layout/activity_info_oppo">
+
+
+
+    <TextView
+        android:text="Destination: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/landigDate"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/destination"
+        android:textStyle="normal|bold"
+        android:textColor="@android:color/background_light" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:srcCompat="@mipmap/opportunity"
+        android:scaleX="1.3"
+        android:id="@+id/imageOpportunity"
+        android:layout_below="@+id/carName"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ScrollView android:layout_height="match_parent" android:layout_width="match_parent"
+        android:layout_below="@+id/textView16"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <TextView
+            android:text="Opportunity was the second of the two rovers launched in 2003 to land on Mars and begin traversing the Red Planet in search of signs of past life. The rover is still actively exploring the Martian terrain, having far outlasted her planned 90-day mission.   Since landing on Mars in 2004, Opportunity has made a number of discoveries about the Red Planet including dramatic evidence that long ago at least one area of Mars stayed wet for an extended period and that conditions could have been suitable for sustaining microbial life.  "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="19dp"
+            android:id="@+id/missionText"
+            android:textColor="@android:color/background_light" />
+    </ScrollView>
+
+    <TextView
+        android:text="Launch Date:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/launchDate"
+        android:layout_below="@+id/imageOpportunity"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textStyle="normal|bold"
+        android:textColor="@android:color/background_light" />
+
+    <TextView
+        android:text="ABOUT THE MISSION "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView16"
+        android:textStyle="normal|bold"
+        android:layout_below="@+id/destination"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="10dp"
+        android:paddingBottom="0dp"
+        android:textColor="@android:color/background_light" />
+
+    <TextView
+        android:text="Acronym: MER"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/acronym"
+        android:layout_below="@+id/carName"
+        android:layout_toRightOf="@+id/textView16"
+        android:layout_toEndOf="@+id/textView16"
+        android:layout_marginRight="5dp"
+        android:textStyle="normal|bold"
+        android:textColor="@android:color/background_light" />
+
+    <TextView
+        android:text="Status: Current"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/status"
+        android:layout_below="@+id/type"
+        android:layout_alignRight="@+id/type"
+        android:layout_alignEnd="@+id/type"
+        android:textColor="@android:color/holo_green_dark"
+        android:textStyle="normal|bold|italic"
+        android:textAllCaps="true" />
+
+    <TextView
+        android:text="Type: Lander/Rover"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/type"
+        android:layout_below="@+id/acronym"
+        android:layout_alignRight="@+id/acronym"
+        android:layout_alignEnd="@+id/acronym"
+        android:textStyle="normal|bold"
+        android:textColor="@android:color/background_light" />
+
+    <TextView
+        android:text="Mars Exploration Rover - Opportunity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/carName"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="normal|bold"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorPrimary" />
+
+    <TextView
+        android:text="July 07, 2003 11:18 p.m. EDT (03:18 UTC)"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView18"
+        android:layout_below="@+id/launchDate"
+        android:layout_alignLeft="@+id/carName"
+        android:layout_alignStart="@+id/carName"
+        android:textColor="@android:color/background_light" />
+
+    <TextView
+        android:text="Launch Location:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/launchLocation"
+        android:textStyle="normal|bold"
+        android:layout_below="@+id/textView18"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="@android:color/background_light" />
+
+    <TextView
+        android:text="Cape Canaveral Air Force Station, Florida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView19"
+        android:layout_below="@+id/launchLocation"
+        android:layout_alignLeft="@+id/textView18"
+        android:layout_alignStart="@+id/textView18"
+        android:textColor="@android:color/background_light" />
+
+    <TextView
+        android:text="Landing Date: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/landigDate"
+        android:textStyle="normal|bold"
+        android:layout_below="@+id/textView19"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="@android:color/background_light" />
+
+    <TextView
+        android:text="January 25, 2004 04:54 UTC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/landigDate"
+        android:layout_toRightOf="@+id/landigDate"
+        android:layout_toEndOf="@+id/landigDate"
+        android:id="@+id/textView20"
+        android:textColor="@android:color/background_light" />
+
+    <TextView
+        android:text="Terra Meridiani, Mars"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/landigDate"
+        android:layout_toRightOf="@+id/destination"
+        android:layout_toEndOf="@+id/destination"
+        android:id="@+id/textView21"
+        android:textColor="@android:color/background_light" />
+
+</RelativeLayout>

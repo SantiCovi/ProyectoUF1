@@ -21,8 +21,6 @@ public class HttpUtils {
         if(statusCode != 200){
             return "ERROR: No Photos Found";
         }
-        //AÑADIR EXCEPCIONES
-
         try {
             InputStream in = new BufferedInputStream(urlConnection.getInputStream());
             response = readStream(in);

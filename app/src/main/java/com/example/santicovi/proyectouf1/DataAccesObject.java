@@ -1,7 +1,5 @@
 package com.example.santicovi.proyectouf1;
 
-
-
 import android.net.Uri;
 import android.util.Log;
 import org.json.JSONArray;
@@ -10,18 +8,8 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.util.ArrayList;
 
-
-/**
- * Created by 46066294p on 14/10/16.
- */
-
 public class DataAccesObject {
-    /*
-    LLamada general a la API
-https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&camera=mast&page=33&api_key=XXXXXXXXX
-    */
 
-    //private static final int PAGES = 1;
     private static final String API_KEY = "5tYEBLjPGEoVxuzwZ7dNIoWMtnmCPpPo8Mk7WRen";
     private static final String BASE_URL = "https://api.nasa.gov/mars-photos/api/v1/rovers/";
 
@@ -53,7 +41,6 @@ https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&camera=
         ArrayList<Photo> photos = new ArrayList<>();
 
         try {
-            //conexio a la api
             String jsonResponse = HttpUtils.get(url);
             ArrayList<Photo> list = processJson(jsonResponse);
             photos.addAll(list);
@@ -80,10 +67,9 @@ https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&camera=
                 Photo photo = new Photo();
                 photo.setRoverId(jsonOnePhoto.getInt("id"));
                 photo.setSol(jsonOnePhoto.getInt("sol"));
-                //photo.setPage(jsonOnePhoto.getInt("page"));
                 photo.setImageUrl(jsonOnePhoto.getString("img_src"));
 
-                //"rover":{}
+
                 for(int j = 0; j < jsonRover.length(); j++){
                     photo.setTotalPhotos(jsonRover.getInt("total_photos"));
                     photo.setMaxSol(jsonRover.getInt("max_sol"));
@@ -94,7 +80,6 @@ https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&camera=
                     photo.setLandingDate(jsonRover.getString("landing_date"));
                 }
 
-                //"camera":{}
                 for(int j = 0; j < jsonCamera.length(); j++){
                     photo.setRoverCam(jsonCamera.getString("name"));
                 }
@@ -109,4 +94,4 @@ https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&camera=
         return photos;
     }
 
-}// DataAccesObject class
+}

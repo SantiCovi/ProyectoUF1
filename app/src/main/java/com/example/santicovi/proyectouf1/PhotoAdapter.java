@@ -26,7 +26,6 @@ public class PhotoAdapter extends ArrayAdapter<Photo>{
     public View getView(int position, View convertView, ViewGroup parent) {
         Photo photo = getItem(position);
 
-        //classe autogenerada?
         LvPhotosRowBinding binding = null;
 
         if (convertView == null) {
@@ -38,7 +37,6 @@ public class PhotoAdapter extends ArrayAdapter<Photo>{
 
         binding.roverName.setText(photo.getRoverName());
         binding.roverId.setText(photo.getRoverId());
-        //binding.sol.setText(photo.getSol());
         binding.sol.setText(photo.getSol());
         binding.camera.setText(photo.getRoverCam());
         binding.status.setText(photo.getStatus());
