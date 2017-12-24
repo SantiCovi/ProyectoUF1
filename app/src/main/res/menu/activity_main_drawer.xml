@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Select Rover type">
+        <menu>
+            <item
+                android:id="@+id/curiosity"
+                android:icon="@mipmap/curiosity_icon"
+                android:title="Curiosity Rover" />
+            <item
+                android:id="@+id/opportunity"
+                android:icon="@mipmap/opportunity_icon"
+                android:title="Opportunity Rover" />
+            <item
+                android:id="@+id/spirit"
+                android:icon="@mipmap/spirit_icon"
+                android:title="Spirit Rover" />
+        </menu>
+    </item>
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/notes"
+            android:icon="@mipmap/ic_launcher"
+            android:title="Notes" />
+        <item
+            android:id="@+id/about"
+            android:icon="@mipmap/ic_launcher_two"
+            android:title="About" />
+
+    </group>
+
+
+</menu>
