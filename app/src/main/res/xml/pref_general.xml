@@ -1,0 +1,40 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ListPreference
+        android:defaultValue="curiosity"
+        android:entries="@array/rover_types_entries"
+        android:entryValues="@array/rover_types_out"
+        android:key="select_rover"
+        android:title="@string/select_rover" />
+
+    <EditTextPreference
+        android:defaultValue="1000"
+
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="@string/title_sol"
+        android:key="input_sol" />
+
+    <ListPreference
+        android:defaultValue="NAVCAM"
+        android:entries="@array/rover_camera_entries"
+        android:entryValues="@array/rover_camera_out"
+        android:key="select_camera"
+        android:title="@string/rover_camera_name" />
+
+    <EditTextPreference
+        android:defaultValue="1"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="@string/page_num"
+        android:key="input_page" />
+    
+    <EditTextPreference
+        android:defaultValue="Enter your notes."
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="@string/my_notes"
+        android:key="my_notes_edit_text_preference" />
+
+
+</PreferenceScreen>
