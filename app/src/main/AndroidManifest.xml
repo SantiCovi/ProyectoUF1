@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.santicovi.proyectouf1">
+    package="mysupercompany.nasapi">
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/nasa_logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
@@ -19,6 +20,50 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="mysupercompany.nasapi.MainActivity" />
+        </activity>
+        <activity
+            android:name=".DetailActivity"
+            android:label="@string/title_activity_detail"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="mysupercompany.nasapi.MainActivity" />
+        </activity>
+
+        <provider
+            android:name=".NasApiContentProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false" />
+
+        <activity
+            android:name=".InfoRover"
+            android:label="@string/title_activity_info_rover"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="mysupercompany.nasapi.MainActivity" />
+        </activity>
+        <activity
+            android:name=".InfoRoverOppo"
+            android:label="@string/title_activity_info_rover_oppo"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".InfoRoverSp"
+            android:label="@string/title_activity_info_rover_sp"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FilesActivity"
+            android:label="@string/title_activity_files"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

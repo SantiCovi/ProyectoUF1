@@ -22,7 +22,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import java.util.ArrayList;
 
-import mysupercompany.nasapi.databinding.FragmentSuperBinding;
+import mysupercompany.proyectouf1.databinding.FragmentSuperBinding;
  
 
 public class SuperFragment extends Fragment implements LoaderManager.LoaderCallbacks<Cursor> {

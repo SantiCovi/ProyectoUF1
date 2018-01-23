@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 
 import com.bumptech.glide.Glide;
 
-import mysupercompany.nasapi.databinding.LvPhotosRowBinding;
+import mysupercompany.proyectouf1.databinding.LvPhotosRowBinding;
 
 
 

@@ -11,7 +11,7 @@ import android.widget.ArrayAdapter;
 import com.bumptech.glide.Glide;
 import java.util.List;
 
-import mysupercompany.nasapi.databinding.LvPhotosRowBinding;
+import mysupercompany.proyectouf1.databinding.LvPhotosRowBinding;
 
 
 
